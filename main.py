@@ -37,7 +37,7 @@ with dataset:
     st.write("this data can be downloaded from [taxi data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)")
 
     # read the csv file
-    taxi_data_1 = pd.read_csv("Data\data_reports_monthly.csv")
+    taxi_data_1 = pd.read_csv("Data/data_reports_monthly.csv")
     st.write(taxi_data_1.head(5))
 
     taxi_data = pd.read_csv("Data\\taxi+_zone_lookup.csv")
