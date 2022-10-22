@@ -40,7 +40,7 @@ with dataset:
     taxi_data_1 = pd.read_csv("Data/data_reports_monthly.csv")
     st.write(taxi_data_1.head(5))
 
-    taxi_data = pd.read_csv("Data\\taxi+_zone_lookup.csv")
+    taxi_data = pd.read_csv("Data/taxi+_zone_lookup.csv")
     st.write(taxi_data.head(10))
 
     # plotting the service zone
