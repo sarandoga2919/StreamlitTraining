@@ -53,21 +53,21 @@ with dataset:
     date = taxi_data_1['Month/Year']
     avg_hours = taxi_data_1["         Avg Hours Per Day Per Driver         "]
 
-with features:
-    st.header("The features I created")
-    st.markdown("* **first feature:**")
-    st.markdown("* **second feature:**")
+#with features:
+#    st.header("The features I created")
+#    st.markdown("* **first feature:**")
+#    st.markdown("* **second feature:**")
 
 
 with model_training:
-    st.header("Time to train the model")
+    st.header("Some features")
 
     sel_col, disp_col = st.columns(2)
 
-    sel_col.slider('What should be the max_depth of the model',min_value=10,max_value=100,value=20)
+    sel_col.slider('pick a number from 10 to 100',min_value=10,max_value=100,value=20)
 
     n_estimator = sel_col.selectbox("How many trees should there be?", options=[100,200,300, 'No limit'])
 
-    input_feature = sel_col.selectbox('Which feature should be used?', options=taxi_data_1.columns)
+    input_feature = sel_col.selectbox('Which feature should be used from the first dataset?', options=taxi_data_1.columns)
 
     test = disp_col.write(taxi_data_1[input_feature].sort_values(ascending=False).head(7))
