@@ -21,10 +21,10 @@ model_training = st.container()
 # the below function is not going to run again st is going to save the results of this actions of this function
 # somewhere and when you call it again it's not goint to perform the action, it's just goint to send you 
 # the save version automatically
-@st.cache 
-def get_data(filename):
-    data = pd.read_csv(filename)
-    return data
+#@st.cache 
+#def get_data(filename):
+#    data = pd.read_csv(filename)
+#    return data
 
 with header:
     # title is the biggest letter format
@@ -37,7 +37,7 @@ with dataset:
     st.write("this data can be downloaded from [taxi data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)")
 
     # read the csv file
-    taxi_data_1 = get_data("Data\data_reports_monthly.csv")
+    taxi_data_1 = pd.read_csv("Data\data_reports_monthly.csv")
     st.write(taxi_data_1.head(5))
 
     taxi_data = pd.read_csv("Data\\taxi+_zone_lookup.csv")
